@@ -1,6 +1,7 @@
-import image from "../assets/signature.jpg";
-
-const KeyImages = () => {
+interface props {
+  image: string;
+}
+const KeyImages = ({ image }: props) => {
   return (
     <>
       <div className="centered-image">

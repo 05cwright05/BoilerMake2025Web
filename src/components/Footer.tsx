@@ -4,12 +4,12 @@ import mail from "../assets/mail.png";
 const Footer = () => {
   return (
     <div className="footer">
-      <h1 className="logo footer-logo vertical-center">SafeSure</h1>
+      <h1 className="logo footer-logo vertical-center">SignSure</h1>
       <div className="footer-icons">
         <div
           className="footer-icon"
           onClick={() =>
-            (window.location.href = "mailto:safesureteam@gmail.com")
+            (window.location.href = "mailto:signasureteam@gmail.com")
           }
         >
           <img src={mail} alt="Email" />

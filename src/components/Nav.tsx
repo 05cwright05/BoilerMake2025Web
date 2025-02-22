@@ -6,7 +6,7 @@ const Nav = () => {
   return (
     <>
       <div className="header">
-        <div className="logo">SafeSure</div>
+        <div className="logo">SignaSure</div>
         <div className="nav">
           <a
             href="#"
