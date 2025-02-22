@@ -1,0 +1,155 @@
+:root {
+  --primary:#06c;
+  --white: #FFFF;
+  --font: #36454F;
+  --light-accent: #b0c4de;
+}
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+.header {
+  background-color: var(--white); /* Mantine Blue */
+  padding: 10px 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: var(--primary);
+}
+.line {
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-left: 2vw;
+  margin-right:2vw;
+  height: 2px;
+  background-color: #F0F0F0;
+  border-radius: 3px;
+}
+.logo {
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  margin-right:20px;
+}
+
+.nav a {
+  color: var(--font);
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 0.15em;
+  display: inline-block;
+  padding: 15px 20px;
+  position: relative;
+}
+.nav a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  display: block;
+  background: none repeat scroll 0 0 transparent;
+  height: 3px;
+  width: 0;
+  background: var(--primary);
+}
+.nav a:hover::after {
+    width: 100%; 
+    left: 0; 
+}
+.nav a:hover {
+  color: var(--primary)
+}
+.nav a.active {
+  color: var(--primary);
+}
+.nav a.active::after {
+  width: 100%; 
+  left: 0; 
+}
+.flex {
+  display: flex;
+  flex-direction: row; /* Side by side on desktop */
+  gap: 20px; /* Add some space between the components */
+}
+/* Flex children take up equal space */
+.flex > * {
+  flex: 1;
+}
+.key-information-block {
+  padding:20px;
+}
+.centered-image {
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  padding:20px;
+}
+.catch-phrase {
+  font-size: 64px;
+  color: var(--primary);
+  padding: 10px 0px;
+}
+.subtext {
+  font-size: 24px;
+  color: var(--font)
+}
+.image {
+  width: 70%;
+  height:auto;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+  border: 10px solid var(--light-accent);
+
+}
+.image:hover {
+  transform: scale(1.05); /* Enlarge image on hover */
+  transform-origin: center; /* Expand from the center */
+}
+
+.footer {
+  width: 100vw;
+  height: 100px;
+  background-color: var(--primary);
+  padding: 0 60px;
+  display: flex;
+  align-items: center; /* Center vertically */
+  justify-content: space-between; /* Space between items */
+}
+.footer-logo {
+  color: var(--white)
+}
+.footer-icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%; /* Make it a circle */
+  border: 1px solid #b0c4de; /* Border color */
+  background-color: #1371e0
+  ; /* Slightly different blue color */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.3s ease; /* Smooth transition */
+}
+.footer-icon:hover {
+  transform: scale(.9); /* Enlarge image on hover */
+  transform-origin: center; /* Expand from the center */
+  background-color: black;
+}
+.footer-icons {
+  display: flex;
+  gap: 20px; /* Space between icons */
+  height: 100px;
+  align-items: center; /* Center vertically */
+
+}
+.footer-icon img {
+  width: 60%;
+  height: auto;
+}
+.demo {
+  height: 1000px;
+}
