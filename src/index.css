@@ -1,6 +1,6 @@
 @font-face {
   font-family: 'SF Pro';
-  src: url('./fonts/SF-Pro-Regular.ttf') format('truetype');
+  src: url('./fonts/SF-Pro.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
@@ -100,6 +100,7 @@ body {
 }
 .nav a.active {
   color: var(--white);
+
 }
 .nav a.active::after {
   width: 100%; 

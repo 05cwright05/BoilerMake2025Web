@@ -1,7 +1,9 @@
 import { useState } from "react";
 import logo from "../assets/logo.svg";
+import { useNavigate } from "react-router-dom";
 const Nav = () => {
   const [selected, setSelected] = useState("About");
+  const navigate = useNavigate(); // React Router navigation
 
   return (
     <>
@@ -12,15 +14,19 @@ const Nav = () => {
         </div>
         <div className="nav">
           <a
-            href="#"
-            onClick={() => setSelected("About")}
+            onClick={() => {
+              setSelected("About");
+              navigate("/");
+            }}
             className={selected === "About" ? "active" : ""}
           >
             About
           </a>
           <a
-            href="#"
-            onClick={() => setSelected("Pricing")}
+            onClick={() => {
+              setSelected("Pricing");
+              navigate("/pricing");
+            }}
             className={selected === "Pricing" ? "active" : ""}
           >
             Pricing
