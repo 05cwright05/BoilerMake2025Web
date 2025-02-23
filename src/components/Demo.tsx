@@ -38,8 +38,9 @@ const Demo = () => {
       if (response.ok) {
         console.log("Image processed successfully:", flask_response);
         // Extract similarity_score
-        const similarity = flask_response.similarity_score;
-        console.log("Similarity Score:", similarity);
+        const similarity = flask_response.classification; 
+               // Set the result based on the similarity score;
+        console.log("classification", similarity);
         if (similarity === "Forgery") {
           setResult("invalid");
         } else {
