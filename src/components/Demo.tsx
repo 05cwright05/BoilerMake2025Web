@@ -8,6 +8,42 @@ const Demo = () => {
   const [base64File1, setBase64File1] = useState<string | null>(null);
   const [base64File2, setBase64File2] = useState<string | null>(null);
   const [result, setResult] = useState("unknown");
+  const sendImageData = async (imageBase641: string, imageBase642: string) => {
+    console.log("starting api call");
+    // Prepare the data to be sent to the API (JSON format)
+    const requestData = {
+      image_data: [imageBase641, imageBase642], // The base64 string without the prefix "data:image/png;base64,"
+    };
+    console.log("defined request data");
+    console.log(imageBase641);
+    console.log(imageBase641);
+
+    try {
+      console.log("in try");
+      const response = await fetch(`http://127.0.0.1:5000/process_images`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          PIN: "123456", // Add PIN in header for authentication
+        },
+        body: JSON.stringify(requestData), // Convert JS object to JSON string
+      });
+      console.log("awaiting response");
+      // Check if the request was successful
+      const flask_response = await response.json();
+      console.log("hi");
+
+      if (response.ok) {
+        console.log("Image processed successfully:", flask_response);
+      } else {
+        console.log("Error:", flask_response.error);
+      }
+    } catch (error) {
+      console.log("in catch");
+      console.error("Error while uploading image:", error);
+    }
+  };
+
   useEffect(() => {
     if (file1 && file2) {
       // Convert files to Base64 before logging
@@ -23,6 +59,7 @@ const Demo = () => {
   useEffect(() => {
     if (base64File1 && base64File2) {
       /* CALL API HERE */
+      sendImageData(base64File1, base64File2);
     }
   }, [base64File1, base64File2]); // Runs when these state values update
 
