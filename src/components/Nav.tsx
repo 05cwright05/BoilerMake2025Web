@@ -1,12 +1,15 @@
 import { useState } from "react";
-
+import logo from "../assets/logo.svg";
 const Nav = () => {
   const [selected, setSelected] = useState("About");
 
   return (
     <>
       <div className="header">
-        <div className="logo">SignaSure</div>
+        <div className="logo">
+          <img src={logo} />
+          <h1>SignaSure</h1>
+        </div>
         <div className="nav">
           <a
             href="#"
