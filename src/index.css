@@ -345,3 +345,13 @@ body {
   border-radius: 5px;
   overflow: hidden;
 }
+.description {
+  margin-top: 20px;
+  padding: 10px;
+  text-align: center;
+  color: #292D32;
+  max-width: 300px;
+  word-wrap: break-word; /* Works only for long unbroken words */
+  overflow-wrap: break-word; /* Ensures normal wrapping */
+  white-space: normal; /* Allows wrapping */
+}

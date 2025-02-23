@@ -7,7 +7,7 @@ const Demo = () => {
   const [file2, setFile2] = useState<File | null>(null);
   const [base64File1, setBase64File1] = useState<string | null>(null);
   const [base64File2, setBase64File2] = useState<string | null>(null);
-  const [result, setResult] = useState("unknown");
+  const [result, setResult] = useState("invalid");
   const sendImageData = async (imageBase641: string, imageBase642: string) => {
     console.log("starting api call");
     // Prepare the data to be sent to the API (JSON format)
