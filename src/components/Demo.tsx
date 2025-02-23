@@ -7,7 +7,8 @@ const Demo = () => {
   const [file2, setFile2] = useState<File | null>(null);
   const [base64File1, setBase64File1] = useState<string | null>(null);
   const [base64File2, setBase64File2] = useState<string | null>(null);
-  const [result, setResult] = useState("invalid");
+  const [result, setResult] = useState("unknown");
+
   const sendImageData = async (imageBase641: string, imageBase642: string) => {
     console.log("starting api call");
     // Prepare the data to be sent to the API (JSON format)
@@ -31,10 +32,19 @@ const Demo = () => {
       console.log("awaiting response");
       // Check if the request was successful
       const flask_response = await response.json();
+
       console.log("hi");
 
       if (response.ok) {
         console.log("Image processed successfully:", flask_response);
+        // Extract similarity_score
+        const similarity = flask_response.similarity_score;
+        console.log("Similarity Score:", similarity);
+        if (similarity === "Forgery") {
+          setResult("invalid");
+        } else {
+          setResult("valid");
+        }
       } else {
         console.log("Error:", flask_response.error);
       }

@@ -24,12 +24,12 @@ const Nav = () => {
           </a>
           <a
             onClick={() => {
-              setSelected("Pricing");
-              navigate("/pricing");
+              setSelected("story");
+              navigate("/story");
             }}
-            className={selected === "Pricing" ? "active" : ""}
+            className={selected === "story" ? "active" : ""}
           >
-            Pricing
+            Our Story
           </a>
         </div>
       </div>
