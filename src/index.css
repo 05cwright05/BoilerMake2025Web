@@ -54,6 +54,7 @@ body {
   justify-content: left;
   align-items: center;
   gap:20px;
+  font-family: 'SF Pro', sans-serif;
 }
 .logo img {
   height: 40px;
@@ -374,8 +375,8 @@ body {
 
   .nav a {
     padding: 10px 0; /* Adjust padding for stacked links */
-    margin-right:10px;
-    font-size:14px;
+    margin-right:5px;
+    font-size:12px;
   }
 
 
