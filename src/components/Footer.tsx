@@ -16,7 +16,10 @@ const Footer = () => {
         </div>
         <div
           className="footer-icon"
-          onClick={() => window.open("https://www.linkedin.com/in/", "_blank")}
+          onClick={() =>
+            (window.location.href =
+              "https://www.linkedin.com/in/caden-wright05")
+          }
         >
           <img src={linkedin} alt="LinkedIn" />
         </div>

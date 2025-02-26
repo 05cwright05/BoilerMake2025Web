@@ -355,3 +355,56 @@ body {
   overflow-wrap: break-word; /* Ensures normal wrapping */
   white-space: normal; /* Allows wrapping */
 }
+/* Existing CSS code remains the same until the end */
+
+/* Add this media query at the end of your CSS */
+@media (max-width: 768px) {
+  .flex {
+    flex-direction: column; /* Stack flex items vertically on mobile */
+  }
+
+  .demo-cards-container {
+    flex-direction: column; /* Stack demo cards vertically on mobile */
+    gap: 20px; /* Reduce the gap between stacked items */
+  }
+
+  .nav {
+    margin-right: 0; /* Remove right margin */
+  }
+
+  .nav a {
+    padding: 10px 0; /* Adjust padding for stacked links */
+    margin-right:10px;
+    font-size:14px;
+  }
+
+
+  .footer-icons {
+    margin-top: 10px; /* Add some space above the icons */
+  }
+
+
+  .logo {
+    justify-content: center; /* Center logo on mobile */
+    gap: 10px; /* Reduce gap between logo and text */
+  }
+
+  .logo h1 {
+    font-size: 24px; /* Reduce font size for mobile */
+  }
+
+  .catch-phrase {
+    font-size: 36px; /* Reduce font size for mobile */
+    text-align: center; /* Center align text */
+  }
+
+  .subtext {
+    font-size: 18px; /* Reduce font size for mobile */
+    text-align: center; /* Center align text */
+  }
+
+  .image {
+    max-width: 100%; /* Make images full width on mobile */
+    height: auto; /* Allow height to adjust */
+  }
+}
